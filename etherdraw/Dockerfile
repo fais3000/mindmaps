@@ -1,11 +1,11 @@
-FROM node:9-alpine
-MAINTAINER Jonathan Rosenbaum <fspc@freesoftwarepc.com>
+FROM node:current-alpine
+MAINTAINER Sebastian Hetze <shetze@redhat.com>
 
 RUN apk update; apk add bash git giflib-dev libjpeg-turbo-dev curl mysql-client python2 pkgconfig cairo-dev make g++
 
 WORKDIR /opt/
 
-RUN git clone git://github.com/JohnMcLear/draw.git
+RUN git clone git://github.com/shetze/draw.git
 
 ENV PYTHON=/usr/bin/python2
 
