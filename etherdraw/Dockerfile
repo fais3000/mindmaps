@@ -5,7 +5,7 @@ RUN apk update; apk add bash git giflib-dev libjpeg-turbo-dev curl mysql-client 
 
 WORKDIR /opt/
 
-RUN git clone git://github.com/shetze/draw.git
+RUN git clone git://github.com/shetze/draw.git -b add-text
 
 ENV PYTHON=/usr/bin/python2
 
