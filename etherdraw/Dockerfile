@@ -1,7 +1,7 @@
 FROM node:current-alpine
 MAINTAINER Sebastian Hetze <shetze@redhat.com>
 
-RUN apk update; apk add bash git giflib-dev libjpeg-turbo-dev curl mysql-client python2 pkgconfig cairo-dev make g++
+RUN apk update; apk add bash git giflib-dev libjpeg-turbo-dev curl mysql-client python2 pkgconfig cairo-dev pango-dev make g++
 
 WORKDIR /opt/
 
@@ -22,3 +22,4 @@ RUN addgroup -g 1001 etherdraw \
 USER 1001
 EXPOSE 9002
 ENTRYPOINT ["node", "/opt/draw/server.js"]
+
