@@ -15,6 +15,7 @@ RUN bin/installDeps.sh
 
 RUN addgroup -g 1001 etherdraw \
     && adduser -h /opt/draw -SD -G etherdraw -u 1001 etherdraw \
+    && touch /opt/draw/var/dirty.db \
     && chown -R etherdraw.etherdraw /opt/draw
 
 USER 1001
