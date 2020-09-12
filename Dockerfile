@@ -1,11 +1,11 @@
 FROM node:current-alpine
-MAINTAINER Sebastian Hetze <shetze@redhat.com>
+MAINTAINER Faisal Zahid <faisal@craftypixels.com>
 
 RUN apk update; apk add bash git curl
 
 WORKDIR /opt/
 
-RUN git clone https://github.com/shetze/mindmaps.git
+RUN git clone https://github.com/fais3000/mindmaps.git
 
 ENV PYTHON=/usr/bin/python2
 

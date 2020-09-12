@@ -1,0 +1,8 @@
+version: '3'
+services:
+  mindmaps:
+    build:
+      context: .
+    container_name: mindmaps
+    ports:
+      - 8081:8081
